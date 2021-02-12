@@ -1,0 +1,371 @@
+/******************************************************************
+
+
+	------------------------
+	-- TABLE OF CONTENTS --
+	------------------------
+
+	--  1. Basic
+	--  2. Preloader
+    --  3. Hero
+    --  4. Hero --> Front Content
+    --  5. Hero --> Background Content
+
+
+ ******************************************************************/
+
+
+
+
+/** 1. Basic
+*******************************************************************/
+
+html
+{
+    font-size: 16px;
+}
+
+body
+{
+    font-weight: 300;
+    font-style: normal;
+
+    overflow: hidden;
+
+    color: #fff;
+    background: #000;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a
+{
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: normal;
+
+    color: #fff;
+}
+
+h1
+{
+    font-size: 3.75rem;
+}
+
+h2
+{
+    font-size: 3.125rem;
+}
+
+h3
+{
+    font-size: 2.5rem;
+}
+
+h4
+{
+    font-size: 1.875rem;
+}
+
+h5
+{
+    font-size: 1.25rem;
+}
+
+h6
+{
+    font-size: 1.125rem;
+}
+
+p
+{
+    font-size: 1rem;
+}
+
+a,
+a:hover,
+a:focus
+{
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+         -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #fff;
+}
+
+@media (max-width:700px)
+{
+    html
+    {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px)
+{
+    html
+    {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:350px)
+{
+    html
+    {
+        font-size: 9px;
+    }
+}
+
+@media (orientation:landscape) and (max-height:420px)
+{
+    html
+    {
+        font-size: 10px;
+    }
+}
+
+
+
+/** 2. Hero
+*******************************************************************/
+
+.hero
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .container-mid
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+}
+
+
+
+/** 3. Hero --> Front Content
+*******************************************************************/
+
+.hero .front-content
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 6vw;
+
+    height: 100%;
+}
+
+.hero .front-content .container-mid
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: left;
+}
+
+.hero .front-content .container-mid h1
+{
+    font-weight: bold;
+    line-height: 1.1em;
+
+    margin-top: 0;
+    margin-bottom: .4em;
+}
+
+.hero .front-content .container-mid p.subline
+{
+    font-size: 1.875rem;
+    line-height: 1.5em;
+
+    max-width: 20em;
+    margin-bottom: 1.4em;
+}
+
+.hero .front-content .container-mid a
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 2.95em;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 0 2.85em;
+
+    -webkit-transition: all .2s linear;
+         -o-transition: all .2s linear;
+            transition: all .2s linear;
+
+    color: #fff;
+    border: 2px solid #fff;
+    background: none;
+}
+
+.hero .front-content .container-mid a:hover
+{
+    color: #111;
+}
+
+.hero .front-content .container-mid a:after
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: auto;
+
+    width: 0;
+    height: 100%;
+
+    content: '';
+    -webkit-transition: all .3s cubic-bezier(1, 0, 0, 1);
+         -o-transition: all .3s cubic-bezier(1, 0, 0, 1);
+            transition: all .3s cubic-bezier(1, 0, 0, 1);
+
+    background: #fff;
+}
+
+.hero .front-content .container-mid a:hover:after
+{
+    right: auto;
+    left: 0;
+
+    width: 100%;
+}
+
+.hero .front-content .footer
+{
+    position: absolute;
+    bottom: 14px;
+
+    text-align: left;
+}
+
+.hero .front-content .footer p
+{
+    font-size: .8rem;
+
+    letter-spacing: .02em;
+
+    opacity: .9;
+}
+
+.hero .front-content .footer p a
+{
+    font-weight: bold;
+}
+
+@media (max-width:500px)
+{
+    left: 10vw;
+}
+
+@media (orientation:landscape) and (max-height:550px)
+{
+    .hero .front-content .footer
+    {
+        display: none;
+    }
+}
+
+
+
+/** 4. Hero --> Background Content
+*******************************************************************/
+
+.hero .background-content
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .background-content .background-overlay
+{
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .9;
+    background: #0f33ec;
+}
+
+.hero .background-content .background-img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: opacity 1s ease;
+         -o-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+
+    opacity: 0;
+    background: url(../img/backgroundrs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Page Enter Animation */
+
+.hero .background-content .background-img
+{
+    -webkit-transition: opacity 1s ease;
+         -o-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+
+    opacity: 0;
+}
+
+body.page-loaded .hero .background-content .background-img
+{
+    opacity: 1;
+}
