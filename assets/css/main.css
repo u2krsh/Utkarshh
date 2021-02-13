@@ -1066,7 +1066,7 @@ button {
 
   header.sticky {
       padding: 20px calc(20px + 4vw);
-      background-color: white;
+      background-color: black;
   }
 
   header .logo {
@@ -1164,7 +1164,7 @@ button {
   }
 
   .dropdown ul li a:hover:before {
-      visibility: visible;
+      visibility: hidden;
       width: 60%;
   }
 
@@ -1174,20 +1174,20 @@ button {
   }
 
   header.sticky .logo, header.sticky ul li a {
-      color: var(--text-color);
+      color: white;
   }
 
   header.sticky .logo:hover, header.sticky ul li a:hover {
-      color: var(--dark-pink);
+      color: white;
   }
 
   header.sticky .dropdown {
       padding-top: 20px;
-      background-color: white;
+      background-color: black;
   }
 
   header.sticky .dropdown ul li a:hover {
-      background-color: var(--pink);
+      background-color: white;
       color: white;
   }
 
@@ -1291,7 +1291,7 @@ header.sticky #check:hover ~ .hamburger-nav .hamburger-menu div:after {
 header.sticky .hamburger-menu div,
 header.sticky .hamburger-menu div:before,
 header.sticky .hamburger-menu div:after {
-    background-color: var(--text-color);
+    background-color: white;
 }
 
 #check:checked:hover ~ .hamburger-nav .hamburger-menu div:before,
