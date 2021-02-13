@@ -24,12 +24,56 @@
   <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
-
 </head>
-
 
 <body>
 
+  <!-- Navigation Menu -->
+  <header>
+    <input type="checkbox" id="check" onchange="fixNav()" />
+
+    <a href="/" class="logo" title="Logo">U2K</a>
+    <div class="nav-menu">
+      <ul>
+        <li class="extra-padding-bottom">
+          <a href="/" title="Home" class="menu-selected">Home</a>
+        </li>
+        <li class="has-dropdown">
+          <a title="Portfolio" id="portfolio">Portfolio <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
+          <div class="dropdown" id="p-drop">
+            <ul>
+              <li>
+                <a href="art" title="Art">Art</a>
+              </li>
+              <li>
+                <a href="cs" title="CS">CS</a>
+              </li>
+              <li>
+                <a href="photo" title="Photo" class="last-submenu-item">Photo</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="extra-padding-top">
+          <a href="about" title="About">About</a>
+        </li>
+        <li>
+          <a href="contact" id="last-menu-item" title="Contact">Contact</a>
+        </li>
+      </ul>
+      <div class="menu-social-buttons">
+        <a href="https://www.linkedin.com/in/utkarshcs1/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/u2krsh/" title="Instagram" target="_blank"><i id="ig" class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://github.com/utkarshcs1/" title="Github" target="_blank"><i id="git" class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:utkarshbhardwajmail@gmail.com" title="Email"><i id="mail" class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="hamburger-nav">
+      <div class="hamburger-menu">
+        <div></div>
+      </div>
+    </div>
+  </header>
 
   <!-- PRELOADER -->
   <div class="preloader">
@@ -38,7 +82,6 @@
 
   </div>
   <!-- /PRELOADER -->
-
 
   <!-- IMAGE CONTAINER -->
   <div class="image-container">
@@ -52,25 +95,27 @@
   <!-- CONTENT AREA -->
   <div class="content-area">
 
-
     <!-- CONTENT AREA INNER -->
     <div class="content-area-inner">
-
 
       <!-- INTRO -->
       <section id="intro">
 
-
         <!-- CONTAINER MID -->
         <div class="container-mid">
-
 
           <!-- ANIMATION CONTAINER -->
           <div class="animation-container animation-fade-right" data-animation-delay="0">
 
             <h1>I’m Utkarsh Bhardwaj</h1>
             <h6>a student, web developer and a data science enthusiast.</h6>
-
+            <br>
+            <div class="social-buttons">
+              <a href="https://www.linkedin.com/in/utkarshcs1/" title="LinkedIn" target="_blank"><i id="lkd" class="fa fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/u2krsh/" title="Instagram" target="_blank"><i id="ig" class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://github.com/utkarshcs1/" title="Github" target="_blank"><i id="git" class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="mailto:utkarshbhardwajmail@gmail.com" title="Email"><i id="mail" class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
           </div>
           <!-- /ANIMATION CONTAINER -->
 
@@ -91,6 +136,8 @@
       </section>
       <!-- /INTRO -->
 
+      <hr class="intro-hr">
+
 
       <!-- ABOUT -->
       <section id="about">
@@ -98,18 +145,20 @@
 
         <h3 class="headline scroll-animated">About Me</h3>
 
-        <p class="scroll-animated">Hey! I'm Utkarsh from New Delhi, India. I'm a Sophomore majoring in Computer Science & Applications. I'm passionate about Data Science, Web Development, Political Science & International Relations and Film Making. I'm an
+        <p class="scroll-animated">Hey! I'm Utkarsh from New Delhi, India. I'm a Sophomore majoring in Computer Science & Applications. I'm passionate about Data Science, Web Development, Political Science & International Relations and Film Making.
+          I'm an
           Open-Source contributor and i'm very interested in software development. I am currently engaged in a few web development projects & internships and studying Machine Learning.</p>
 
         <p class="scroll-animated">Apart from that, i like reading, fixing and writing Wikipedia pages, watching science fiction and historical documentaries. 😇 I like content writing and telling people about daily experiences in my blogs.
           <br>
-          <br> I am open to making connections :) <a href="about.html">Know More</a>
+          <br> I am open to making connections :) <a class="click-here" href="about.html">Know More</a>
         </p>
 
 
       </section>
       <!-- /ABOUT -->
 
+      <hr class="about-hr">
 
       <!-- SERVICE -->
       <section id="service">
@@ -245,6 +294,8 @@
       <!-- /SERVICE -->
 
 
+      <hr class="services-hr">
+
       <!-- WORK -->
       <section id="work">
 
@@ -271,8 +322,8 @@
                 <!-- CONTAINER MID -->
                 <div class="container-mid">
 
-                  <h5>Petron</h5>
-                  <p>Web Design</p>
+                  <h5>Personal Website</h5>
+                  <p>Web Design & Development</p>
 
                 </div>
                 <!-- /CONTAINER MID -->
@@ -282,7 +333,7 @@
               <!-- /INFO -->
 
 
-              <div class="background-image" style="background-image: url(assets/img/work/item-1.jpg)"></div>
+              <div class="background-image" style="background-image: url(assets/img/work/utkarshp1.png)"></div>
 
 
             </a>
@@ -293,16 +344,14 @@
             <div id="item-1-lightbox" class="work-lightbox">
 
 
-              <img class="img-responsive" src="assets/img/work/item-1.jpg" alt="image">
+              <img class="img-responsive" src="assets/img/work/utkarshp1.png" alt="image">
 
-              <h3>Petron</h3>
-              <p class="subline">Web Design</p>
+              <h3>Personal Website</h3>
+              <p class="subline">Web Design & Development</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget
-                egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+              <p>// do</p>
 
-              <p>Integer scelerisque et orci in maximus. Nullam ac finibus nisi. Sed libero tellus, fringilla in posuere vitae, sollicitudin consectetur odio. Morbi pharetra tortor quis risus hendrerit, ut tincidunt arcu vehicula. Integer consequat
-                lorem nisl, sit amet euismod libero fringilla placerat. Proin semper consequat ultricies. Vivamus condimentum tortor ac quam tristique, eget rhoncus arcu suscipit.</p>
+              <p>// do</p>
 
 
             </div>
@@ -328,8 +377,8 @@
                 <!-- CONTAINER MID -->
                 <div class="container-mid">
 
-                  <h5>Surf 71</h5>
-                  <p>Product Design</p>
+                  <h5>P2</h5>
+                  <p>D2</p>
 
                 </div>
                 <!-- /CONTAINER MID -->
@@ -352,14 +401,12 @@
 
               <img class="img-responsive" src="assets/img/work/item-2.jpg" alt="image">
 
-              <h3>Surf 71</h3>
-              <p class="subline">Product Design</p>
+              <h3>P2</h3>
+              <p class="subline">D2</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget
-                egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+              <p>// do</p>
 
-              <p>Integer scelerisque et orci in maximus. Nullam ac finibus nisi. Sed libero tellus, fringilla in posuere vitae, sollicitudin consectetur odio. Morbi pharetra tortor quis risus hendrerit, ut tincidunt arcu vehicula. Integer consequat
-                lorem nisl, sit amet euismod libero fringilla placerat. Proin semper consequat ultricies. Vivamus condimentum tortor ac quam tristique, eget rhoncus arcu suscipit.</p>
+              <p>// do</p>
 
 
             </div>
@@ -385,8 +432,8 @@
                 <!-- CONTAINER MID -->
                 <div class="container-mid">
 
-                  <h5>Game Nation</h5>
-                  <p>Marketing</p>
+                  <h5>P3</h5>
+                  <p>D3</p>
 
                 </div>
                 <!-- /CONTAINER MID -->
@@ -409,14 +456,12 @@
 
               <img class="img-responsive" src="assets/img/work/item-3.jpg" alt="image">
 
-              <h3>Game Nation</h3>
-              <p class="subline">Marketing</p>
+              <h3>P3</h3>
+              <p class="subline">D3</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget
-                egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+              <p>// do</p>
 
-              <p>Integer scelerisque et orci in maximus. Nullam ac finibus nisi. Sed libero tellus, fringilla in posuere vitae, sollicitudin consectetur odio. Morbi pharetra tortor quis risus hendrerit, ut tincidunt arcu vehicula. Integer consequat
-                lorem nisl, sit amet euismod libero fringilla placerat. Proin semper consequat ultricies. Vivamus condimentum tortor ac quam tristique, eget rhoncus arcu suscipit.</p>
+              <p>// do</p>
 
 
             </div>
@@ -442,8 +487,8 @@
                 <!-- CONTAINER MID -->
                 <div class="container-mid">
 
-                  <h5>Cronomax</h5>
-                  <p>UI/UX DESIGN</p>
+                  <h5>P4</h5>
+                  <p>D4</p>
 
                 </div>
                 <!-- /CONTAINER MID -->
@@ -466,14 +511,12 @@
 
               <img class="img-responsive" src="assets/img/work/item-4.jpg" alt="image">
 
-              <h3>Cronomax</h3>
-              <p class="subline">UI/UX DESIGN</p>
+              <h3>P4</h3>
+              <p class="subline">D4</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus eros, quis imperdiet sapien. Nam sodales nec risus nec interdum. Proin lobortis, ex condimentum ultricies eleifend, nisl nunc sollicitudin odio, eget
-                egestas est turpis et metus. In non ligula quis mauris rutrum porta.</p>
+              <p>// do</p>
 
-              <p>Integer scelerisque et orci in maximus. Nullam ac finibus nisi. Sed libero tellus, fringilla in posuere vitae, sollicitudin consectetur odio. Morbi pharetra tortor quis risus hendrerit, ut tincidunt arcu vehicula. Integer consequat
-                lorem nisl, sit amet euismod libero fringilla placerat. Proin semper consequat ultricies. Vivamus condimentum tortor ac quam tristique, eget rhoncus arcu suscipit.</p>
+              <p>// do</p>
 
 
             </div>
@@ -491,6 +534,7 @@
       </section>
       <!-- /WORK -->
 
+      <hr class="work-hr">
 
       <!-- CONTACT -->
       <section id="contact">
