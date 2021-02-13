@@ -1,10 +1,10 @@
 <?php
 
 // ENTER YOUR EMAIL
-$emailTo = "yourmail@example.com";
+$emailTo = "utkarshbhardwajmail@gmail.com";
 
 // ENTER IDENTIFIER
-$emailIdentifier =  "Message sent via contact form from " . $_SERVER["SERVER_NAME"];
+$emailIdentifier =  "Message sent via contact form from " . $_SERVER["Personal Website"];
 
 
 if($_POST) {
@@ -19,26 +19,26 @@ if($_POST) {
     if($name == "") {
     	$array["nameMessage"] = "x";
     }
-	
+
     if(!filter_var($clientEmail, FILTER_VALIDATE_EMAIL)) {
         $array["emailMessage"] = "x";
     }
-	
+
     if($message == "") {
         $array["messageMessage"] = "x";
     }
-	
+
     if($name != "" && filter_var($clientEmail, FILTER_VALIDATE_EMAIL) && $message != "" && $fhp_input == "") {
-		
+
 		$array["succesMessage"] = "";
-		
+
 		$headers  = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 		$headers .= "From: " . $name . " <" . $clientEmail .">\r\n";
 		$headers .= "Reply-To: " . $clientEmail;
-		
+
 		mail($emailTo, $emailIdentifier, $message, $headers);
-		
+
     }
 
     echo json_encode($array);
