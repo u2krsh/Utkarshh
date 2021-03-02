@@ -15,6 +15,7 @@
 
 /** 1. Basic
 *******************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
 html {
@@ -33,7 +34,7 @@ body {
 }
 
 .about-page {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
   background: black;
   line-height: normal;
@@ -204,9 +205,18 @@ button {
   -webkit-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
   transition: opacity 1s ease;
-  background: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background: url(../img/backgroundrs.jpg); */
+   /* background-color: #ADD8E6; */
+   /* background-repeat: no-repeat; */
+   /* background-size: cover; */
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /** 4. Content Area
@@ -235,6 +245,18 @@ button {
 
 .content-area .content-area-inner section h3.headline {
   margin-bottom: 1.4em;
+}
+
+.trans-bg {
+  z-index: 1;
+  color: white;
+  opacity: 50%;
+  position: relative;
+  top: -75px;
+}
+
+.trans-bg:hover {
+  color: grey;
 }
 
 /** 5. Content Area --> Intro
@@ -285,6 +307,12 @@ button {
   vertical-align: middle;
   border: 3px solid #fff;
   border-radius: 100%;
+}
+
+#intro .container-mid a .circle:hover {
+  background-color: black;
+  color: grey;
+  border-color: grey;
 }
 
 #intro .container-mid a .circle i {
@@ -972,6 +1000,16 @@ button {
 
 .about h6 {
   margin-bottom: .6em;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+}
+
+.description:hover {
+color: white;
+-ms-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
 }
 
 .navigation-button {
