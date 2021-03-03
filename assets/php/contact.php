@@ -4,7 +4,7 @@
 $emailTo = "utkarshbhardwajmail@gmail.com";
 
 // ENTER IDENTIFIER
-$emailIdentifier =  "Message sent via contact form from " . $_SERVER["Personal Website"];
+$emailIdentifier =  "Message sent via contact form, from " . $_SERVER["Personal Website"];
 
 
 if($_POST) {
